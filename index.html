@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ------------------------------------ title -->
+    <title>Weather App - JavaScript</title>
+    <!-- ------------------------------------ favicon -->
+    <link rel="shortcut icon" href="./img/clear.png" type="image/x-icon">
+    <!-- ------------------------------------ google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- ------------------------------------ tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full h-screen bg-slate-900 text-white font-poppins flex items-center justify-center">
+    <div id="card" class="w-[90%] max-w-[470px] py-[40px] px-[30px] bg-gradient-to-br from-[#00feba] to-[#5b548a] rounded-2xl">
+        <div id="search" class="w-full relative">
+            <input type="text" placeholder="Enter city name" spellcheck="false" class="border-0 outline-0 py-[20px] pl-[30px] pr-[70px] rounded-[50px] bg-white w-full text-slate-500 placeholder:text-xl text-xl">
+            <button id="btn" class="py-[22.5px] pl-[15px] pr-[30px] rounded-tr-[50px] rounded-br-[50px] cursor-pointer absolute top-0 right-0">
+                <img src="./img/search.png" alt="search icon" class="w-[20px]">
+            </button>
+        </div>
+        <div id="weather" class="mt-6 flex flex-col items-center gap-4 text-center">
+            <div id="weather-img-box">
+                <img src="./img/rain.png" alt="weather icon" class="w-[150px] h-[150px]">
+            </div>
+            <div id="weather-city-and-temp" class="space-y-3">
+                <h1 id="temp" class="text-7xl font-bold">0°C</h1>
+                <h2 id="city" class="text-5xl">Germany</h2>
+            </div>
+        </div>
+        <div id="details" class="w-full flex flex-row items-center justify-between mt-12">
+            <div class="details-cols flex items-center justify-center gap-3">
+                <div id="img-box">
+                    <img src="./img/humidity.png" alt="icons" class="w-[50px]">
+                </div>
+                <div class="humidity-box">
+                    <p id="humidity" class="text-2xl font-semibold">50%</p>
+                    <p id="humidity-text" class="text-xl font-light">Humidity</p>
+                </div>
+            </div>
+            <div class="details-cols flex items-center justify-center gap-3">
+                <div id="img-box">
+                    <img src="./img/wind.png" alt="icons" class="w-[50px]">
+                </div>
+                <div class="wind-box">
+                    <p id="wind" class="text-2xl font-semibold">15 km/h</p>
+                    <p id="humidity-text" class="text-xl font-light">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
