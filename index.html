@@ -17,40 +17,48 @@
 <body class="w-full h-screen bg-slate-900 text-white font-poppins flex items-center justify-center">
     <div id="card" class="w-[90%] max-w-[470px] py-[40px] px-[30px] bg-gradient-to-br from-[#00feba] to-[#5b548a] rounded-2xl">
         <div id="search" class="w-full relative">
-            <input type="text" placeholder="Enter city name" spellcheck="false" class="border-0 outline-0 py-[20px] pl-[30px] pr-[70px] rounded-[50px] bg-white w-full text-slate-500 placeholder:text-xl text-xl">
+            <input id="input" type="text" placeholder="Enter city name" spellcheck="false" class="border-0 outline-0 py-[20px] pl-[30px] pr-[70px] rounded-[50px] bg-white w-full text-slate-500 placeholder:text-slate-500 placeholder:text-xl text-xl" autocomplete="off">
             <button id="btn" class="py-[22.5px] pl-[15px] pr-[30px] rounded-tr-[50px] rounded-br-[50px] cursor-pointer absolute top-0 right-0">
                 <img src="./img/search.png" alt="search icon" class="w-[20px]">
             </button>
         </div>
-        <div id="weather" class="mt-6 flex flex-col items-center gap-4 text-center">
-            <div id="weather-img-box">
-                <img src="./img/rain.png" alt="weather icon" class="w-[150px] h-[150px]">
-            </div>
-            <div id="weather-city-and-temp" class="space-y-3">
-                <h1 id="temp" class="text-7xl font-bold">0°C</h1>
-                <h2 id="city" class="text-5xl">Germany</h2>
-            </div>
+        <div id="err-msg" class="w-full mt-[30px] text-center hidden">
+            <h1 id="err-text" class="font-medium text-xl">City Not Found!!</h1>
         </div>
-        <div id="details" class="w-full flex flex-row items-center justify-between mt-12">
-            <div class="details-cols flex items-center justify-center gap-3">
-                <div id="img-box">
-                    <img src="./img/humidity.png" alt="icons" class="w-[50px]">
+        <div id="display-data" class="hidden">
+            <div id="weather" class="mt-6 flex flex-col items-center gap-4 text-center">
+                <div id="weather-img-box">
+                    <img id="weather-img" src="./img/rain.png" alt="weather icon" class="w-[150px] h-[150px]">
                 </div>
-                <div class="humidity-box">
-                    <p id="humidity" class="text-2xl font-semibold">50%</p>
-                    <p id="humidity-text" class="text-xl font-light">Humidity</p>
+                <div id="weather-city-and-temp" class="space-y-3">
+                    <h1 id="temp" class="text-7xl font-bold">0°C</h1>
+                    <h2 id="city" class="text-5xl">Germany</h2>
                 </div>
             </div>
-            <div class="details-cols flex items-center justify-center gap-3">
-                <div id="img-box">
-                    <img src="./img/wind.png" alt="icons" class="w-[50px]">
+            <div id="details" class="w-full flex flex-row items-center justify-between mt-12">
+                <div class="details-cols flex items-center justify-center gap-3">
+                    <div id="img-box">
+                        <img src="./img/humidity.png" alt="icons" class="w-[50px]">
+                    </div>
+                    <div class="humidity-box">
+                        <p id="humidity" class="text-2xl font-semibold">50%</p>
+                        <p id="humidity-text" class="text-xl font-light">Humidity</p>
+                    </div>
                 </div>
-                <div class="wind-box">
-                    <p id="wind" class="text-2xl font-semibold">15 km/h</p>
-                    <p id="humidity-text" class="text-xl font-light">Wind Speed</p>
+                <div class="details-cols flex items-center justify-center gap-3">
+                    <div id="img-box">
+                        <img src="./img/wind.png" alt="icons" class="w-[50px]">
+                    </div>
+                    <div class="wind-box">
+                        <p id="wind" class="text-2xl font-semibold">15 km/h</p>
+                        <p id="humidity-text" class="text-xl font-light">Wind Speed</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ------------------------------------ script -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
